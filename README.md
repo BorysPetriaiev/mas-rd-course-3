@@ -33,7 +33,7 @@ uv sync
 OPENAI_API_KEY=your_openai_key_here
 ```
 
-### 2. Налаштування конфіденційних даних
+### 3. Запуск агента
 
 ```bash
 uv run main.py
