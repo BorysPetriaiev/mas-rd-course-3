@@ -32,7 +32,6 @@ def read_url(url: str) -> str:
         return "Помилка: не вдалося витягти текст зі сторінки."
     
     text = text.strip()
-    # Context Engineering: обрізаємо занадто довгий текст
     return text[:MAX_TEXT_LENGTH]
 
 @tool
