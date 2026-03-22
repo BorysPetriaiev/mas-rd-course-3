@@ -37,11 +37,9 @@ def read_url(url: str) -> str:
 @tool
 def write_report(filename: str, content: str) -> str:
     """Записує контент у файл Markdown. filename має закінчуватися на .md"""
-    reports_dir = "output"
-    if not os.path.exists(reports_dir):
-        os.makedirs(reports_dir)
+    os.makedirs(OUTPUT_DIR, exist_ok=True)
     
-    path = os.path.join(reports_dir, filename)
+    path = os.path.join(OUTPUT_DIR, filename)
     with open(path, "w", encoding="utf-8") as f:
         f.write(content)
     return f"✅ Звіт успішно збережено у файл: {path}"
